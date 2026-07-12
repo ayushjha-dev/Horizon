@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birchwood — Curator of Exceptional Living</title>
+  <meta name="description" content="Discover Birchwood's curated collection of boutique modern villas, cabins, and penthouses. Premium designs with integrated WhatsApp booking. No templates, purely architectural.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <!-- Preconnect and Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header id="main-header">
+    <div class="container nav-wrapper">
+      <a href="#" class="logo">BIRCHWOOD</a>
+      
+      <nav id="main-nav">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#properties-section" class="nav-link">Properties</a>
+        <a href="#about-section" class="nav-link">About</a>
+        <a href="#contact-section" class="nav-link">Contact</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <a href="https://wa.me/919999999999?text=Hi!%20I'm%20interested%20in%20inquiring%20about%20Birchwood's%20exclusive%20properties." 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn btn-whatsapp header-whatsapp-btn"
+           id="nav-whatsapp-cta">
+          <i data-lucide="message-square"></i>
+          <span>Inquire Now</span>
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu" id="menu-toggle-btn">
+          <i data-lucide="menu" id="menu-icon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Navigation -->
+  <div class="mobile-menu-overlay" id="mobile-menu">
+    <div class="mobile-menu-content">
+      <button class="mobile-menu-close" aria-label="Close Navigation Menu" id="menu-close-btn">
+        <i data-lucide="x"></i>
+      </button>
+      <nav class="mobile-nav-links">
+        <a href="#hero" class="mobile-nav-link">Home</a>
+        <a href="#properties-section" class="mobile-nav-link">Properties</a>
+        <a href="#about-section" class="mobile-nav-link">About</a>
+        <a href="#contact-section" class="mobile-nav-link">Contact</a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <a href="https://wa.me/919999999999?text=Hi!%20I'm%20interested%20in%20inquiring%20about%20Birchwood's%20exclusive%20properties." 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn btn-whatsapp w-full">
+          <i data-lucide="message-square"></i>
+          <span>Chat with an Agent</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="container hero-grid">
+        <div class="hero-text-block">
+          <div class="badge">EXCLUSIVELY CURATED</div>
+          <h1>Architectural clarity.<br><span class="serif italic">Quiet luxury.</span></h1>
+          <p class="hero-description">
+            Birchwood curates space for those who appreciate the poetry of material, light, and geometry. We represent unique residential sanctuaries that celebrate refined architecture and exceptional landscapes.
+          </p>
+          <a href="#properties-section" class="btn btn-primary">
+            <span>Explore Collection</span>
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+        
+        <div class="hero-image-block">
+          <!-- Asymmetric Overlapping Images -->
+          <div class="img-wrapper tall-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" 
+                 alt="Observatory Villa sunset view" 
+                 class="hero-img-tall"
+                 loading="eager">
+          </div>
+          <div class="img-wrapper wide-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80" 
+                 alt="Luxury modern arch exterior" 
+                 class="hero-img-wide"
+                 loading="eager">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Interactive Filter Bar -->
+      <div class="container filter-container-outer">
+        <div class="filter-panel" id="filter-bar">
+          <div class="filter-group">
+            <label for="filter-location"><i data-lucide="map-pin"></i> Location</label>
+            <select id="filter-location">
+              <option value="">All Locations</option>
+              <option value="Alibaug">Alibaug</option>
+              <option value="Rishikesh">Rishikesh</option>
+              <option value="Bengaluru">Bengaluru</option>
+              <option value="Gurugram">Gurugram</option>
+              <option value="Goa">Goa</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Pune">Pune</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <label for="filter-type"><i data-lucide="home"></i> Property Type</label>
+            <select id="filter-type">
+              <option value="">All Types</option>
+              <option value="Villa">Villa</option>
+              <option value="Apartment">Apartment</option>
+              <option value="Penthouse">Penthouse</option>
+              <option value="Cabin">Cabin</option>
+              <option value="Townhouse">Townhouse</option>
+            </select>
+          </div>
+          
+          <div class="filter-group slider-group">
+            <div class="slider-header">
+              <label for="filter-price"><i data-lucide="indian-rupee"></i> Max Budget</label>
+              <span id="price-value">₹20 Cr</span>
+            </div>
+            <input type="range" id="filter-price" min="15000000" max="200000000" step="5000000" value="200000000" class="range-slider">
+            <div class="slider-limits">
+              <span>₹1.5 Cr</span>
+              <span>₹20 Cr</span>
+            </div>
+          </div>
+          
+          <div class="filter-actions">
+            <button class="btn btn-accent" id="btn-apply-filters">
+              <i data-lucide="search"></i>
+              <span>Find Properties</span>
+            </button>
+            <button class="btn-reset-filters" id="btn-reset-filters" title="Reset Filters">
+              <i data-lucide="rotate-ccw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Properties Section -->
+    <section id="properties-section">
+      <div class="container section-header-wrapper">
+        <div class="section-title-area">
+          <div class="section-badge">CURRENT COLLECTION</div>
+          <h2>Curated Residences</h2>
+        </div>
+        <p class="section-subtitle">
+          A careful selection of limited-edition physical assets designed for high privacy, structural simplicity, and spatial elegance.
+        </p>
+      </div>
+
+      <div class="container">
+        <!-- Properties Grid -->
+        <div class="properties-grid" id="properties-grid">
+          <!-- Dynamically loaded via app.js -->
+        </div>
+        
+        <!-- Empty state -->
+        <div class="empty-state-container hidden" id="properties-empty-state">
+          <i data-lucide="alert-circle" class="empty-icon"></i>
+          <h3>No Residences Match Your Selection</h3>
+          <p>Try adjusting your filters or pricing criteria to explore other available assets.</p>
+          <button class="btn btn-outline" id="btn-empty-reset">View All Residences</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-section">
+      <div class="container about-grid">
+        <div class="about-image-block">
+          <div class="about-img-frame">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" 
+                 alt="Modern architectural structure living room" 
+                 class="about-img"
+                 loading="lazy">
+          </div>
+          <div class="agent-card-float">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80" 
+                 alt="Senior curator agent portrait" 
+                 class="agent-avatar">
+            <div class="agent-info">
+              <h4>Devang Vora</h4>
+              <p>Principal Architect & Director</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-text-block">
+          <div class="section-badge">OUR MANIFESTO</div>
+          <h2>Houses that speak.<br><span class="serif italic">Details that remain.</span></h2>
+          <p>
+            We believe a home is a three-dimensional container of silence and character. Unlike standard template developments, every listing in the Birchwood portfolio is selected based on its structural integrity, relationship to light, and execution of raw materials.
+          </p>
+          <p>
+            Our service is bespoke. We bypass standard real estate listings, offering off-market guidance directly to individuals looking for spatial sanctuary.
+          </p>
+          
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-num">₹1,200 Cr+</span>
+              <span class="stat-lbl">In Curated Transactions</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">15+</span>
+              <span class="stat-lbl">Years of Design Integrity</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">98%</span>
+              <span class="stat-lbl">Off-Market Exclusivity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials-section">
+      <div class="container section-header-wrapper text-center">
+        <div class="section-badge margin-auto">PATRONS</div>
+        <h2>Living in Silence</h2>
+        <p class="section-subtitle margin-auto">
+          Insights from the collectors and individuals who have established their sanctuaries through our advisory.
+        </p>
+      </div>
+      
+      <div class="container testimonials-grid">
+        <div class="testimonial-card">
+          <span class="quote-mark">“</span>
+          <p class="testimonial-quote">
+            Cove House has transformed our relationship with the landscape. Devang and his team understood that we wanted silence, not showmanship. The brutalist forms are pure poetry.
+          </p>
+          <div class="testimonial-author">
+            <strong>Aditya & Sunita Roy</strong>
+            <span>Art Collectors & Tech Founders</span>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <span class="quote-mark">“</span>
+          <p class="testimonial-quote">
+            Purchasing The Oakridge Pavilion was an exercise in absolute trust. Birchwood guided us off-market to a sanctuary that aligns perfectly with our sustainability values.
+          </p>
+          <div class="testimonial-author">
+            <strong>Dr. Kabir Sen</strong>
+            <span>Environmentalist & Writer</span>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <span class="quote-mark">“</span>
+          <p class="testimonial-quote">
+            The spatial clarity of the Monolith Studio is incredible. No wasted columns, high industrial ceilings, and custom details. They represent architecture, not just real estate.
+          </p>
+          <div class="testimonial-author">
+            <strong>Meera Krishnan</strong>
+            <span>Creative Director, Studio MK</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Office Section -->
+    <section id="contact-section">
+      <div class="container contact-grid">
+        <div class="contact-form-block">
+          <div class="section-badge">INQUIRIES</div>
+          <h2>Initiate a Conversation</h2>
+          <p>
+            For private viewings or to discuss listing a property of exceptional design merit, please complete the form below. Alternatively, contact our desk instantly via WhatsApp.
+          </p>
+          
+          <form id="contact-form" class="inquiry-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Name</label>
+                <input type="text" id="contact-name" placeholder="e.g. Rohini Iyer" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" placeholder="e.g. rohini@studio.com" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="contact-property">Property of Interest</label>
+              <select id="contact-property">
+                <option value="">General Inquiries / Representation</option>
+                <!-- Dynamically filled with properties via app.js -->
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" rows="5" placeholder="Share your timeline or specific architectural criteria..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary w-full">
+              <span>Send Inquiry</span>
+              <i data-lucide="arrow-right"></i>
+            </button>
+            <div id="form-feedback" class="form-feedback-message hidden"></div>
+          </form>
+        </div>
+        
+        <div class="contact-info-block">
+          <div class="office-location-details">
+            <h3>Birchwood Atelier</h3>
+            <p class="office-address">
+              Ground Floor, The Terraces,<br>
+              Opposite Fountainhas, Panaji, Goa — 403001
+            </p>
+            
+            <div class="contact-links">
+              <a href="tel:+919999999999" class="contact-link"><i data-lucide="phone"></i> +91 99999 99999</a>
+              <a href="mailto:concierge@birchwoodresidences.com" class="contact-link"><i data-lucide="mail"></i> concierge@birchwoodresidences.com</a>
+              <span class="contact-link"><i data-lucide="clock"></i> 10:00 AM — 06:00 PM IST (Mon - Sat)</span>
+            </div>
+          </div>
+          
+          <!-- Map Embed Area (OpenStreetMap) -->
+          <div class="map-embed-wrapper">
+            <iframe 
+              src="https://www.openstreetmap.org/export/embed.html?bbox=73.8291%2C15.4851%2C73.8391%2C15.4951&amp;layer=mapnik&amp;marker=15.4901%2C73.8341" 
+              class="osm-iframe" 
+              title="Birchwood Atelier Goa Office Location">
+            </iframe>
+            <div class="map-overlay-caption">
+              <a href="https://www.openstreetmap.org/?mlat=15.4901&amp;mlon=73.8341#map=17/15.49010/73.83410" target="_blank" rel="noopener noreferrer">
+                <i data-lucide="external-link"></i> View larger map
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-column">
+        <a href="#" class="footer-logo">BIRCHWOOD</a>
+        <p class="footer-tagline">Curating structures of silence, texture, and light.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+          <a href="#" aria-label="Pinterest"><i data-lucide="pin"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-links-column">
+        <h4>Navigation</h4>
+        <a href="#hero">Home</a>
+        <a href="#properties-section">Curated Collection</a>
+        <a href="#about-section">Manifesto</a>
+        <a href="#contact-section">Private Office</a>
+      </div>
+      
+      <div class="footer-links-column">
+        <h4>Asset Classes</h4>
+        <a href="#" class="filter-type-link" data-type="Villa">Bespoke Villas</a>
+        <a href="#" class="filter-type-link" data-type="Penthouse">Sky Penthouses</a>
+        <a href="#" class="filter-type-link" data-type="Cabin">Forest Cabins</a>
+        <a href="#" class="filter-type-link" data-type="Townhouse">Minimalist Mews</a>
+      </div>
+      
+      <div class="footer-newsletter-column">
+        <h4>The Birchwood Ledger</h4>
+        <p>A monthly private journal highlighting off-market architectural listings and design essays.</p>
+        <form class="footer-subscribe-form" id="newsletter-form">
+          <input type="email" placeholder="Email address" aria-label="Email address" required>
+          <button type="submit" aria-label="Subscribe"><i data-lucide="arrow-right"></i></button>
+        </form>
+        <div id="newsletter-feedback" class="newsletter-feedback-message hidden">Subscribed.</div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Birchwood Real Estate Syndicate. All design rights reserved.</p>
+      <p>Built with architectural clarity & WhatsApp integration.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Badge -->
+  <div id="floating-whatsapp-widget">
+    <div class="whatsapp-badge-msg">
+      <span>Connect with concierge</span>
+    </div>
+    <a href="https://wa.me/919999999999?text=Hi!%20I'm%20visiting%20your%20website%20and%20would%20like%20to%20discuss%20buying%2Flisting%20an%20exclusive%20property." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="floating-whatsapp-btn"
+       aria-label="Contact Birchwood Concierge on WhatsApp"
+       id="floating-whatsapp-anchor">
+      <i data-lucide="message-square"></i>
+      <span class="pulse-ring"></span>
+    </a>
+  </div>
+
+  <!-- Dynamic Detail Modal Backdrop -->
+  <div id="property-detail-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+    <div class="modal-wrapper">
+      <div class="modal-container">
+        
+        <!-- Modal Control Header -->
+        <div class="modal-control-bar">
+          <span class="modal-property-ref" id="modal-prop-id">REF: BWD-001</span>
+          <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        
+        <div class="modal-body-scroll">
+          
+          <!-- Image Gallery Container -->
+          <div class="modal-gallery-section">
+            <div class="gallery-viewport">
+              <img src="" alt="Main property view" class="gallery-active-image" id="modal-gallery-img">
+              <button class="gallery-nav-btn prev-btn" id="gallery-prev" aria-label="Previous image">
+                <i data-lucide="chevron-left"></i>
+              </button>
+              <button class="gallery-nav-btn next-btn" id="gallery-next" aria-label="Next image">
+                <i data-lucide="chevron-right"></i>
+              </button>
+            </div>
+            <!-- Thumbnails navigation -->
+            <div class="gallery-thumbnails" id="modal-gallery-thumbs">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+          
+          <!-- Property Information Grid -->
+          <div class="modal-details-grid">
+            <div class="modal-info-column">
+              <div class="modal-title-header">
+                <span class="modal-prop-type-badge" id="modal-prop-type">Villa</span>
+                <h2 id="modal-prop-name">Cove House</h2>
+                <p class="modal-prop-loc"><i data-lucide="map-pin"></i> <span id="modal-prop-location">Alibaug, Maharashtra</span></p>
+              </div>
+              
+              <div class="modal-quick-specs">
+                <div class="spec-tile">
+                  <span class="spec-label">Bedrooms</span>
+                  <span class="spec-val"><i data-lucide="bed"></i> <strong id="modal-prop-beds">5</strong></span>
+                </div>
+                <div class="spec-tile">
+                  <span class="spec-label">Bathrooms</span>
+                  <span class="spec-val"><i data-lucide="bath"></i> <strong id="modal-prop-baths">6</strong></span>
+                </div>
+                <div class="spec-tile">
+                  <span class="spec-label">Built-up Area</span>
+                  <span class="spec-val"><i data-lucide="maximize-2"></i> <strong id="modal-prop-sqft">8,200</strong> sq.ft.</span>
+                </div>
+              </div>
+              
+              <div class="modal-description-area">
+                <h3>The Space</h3>
+                <p id="modal-prop-description">Detailed description loads here.</p>
+              </div>
+              
+              <div class="modal-amenities-area">
+                <h3>Spec Features & Amenities</h3>
+                <div class="amenities-tags" id="modal-prop-amenities">
+                  <!-- Dynamically populated tags -->
+                </div>
+              </div>
+            </div>
+            
+            <div class="modal-pricing-cta-column">
+              <div class="cta-sticky-card">
+                <div class="pricing-block">
+                  <span class="pricing-label">Investment Value</span>
+                  <h3 class="price-figure" id="modal-prop-price">₹12,50,00,000</h3>
+                  <span class="pricing-subtext">All-inclusive registration and transfer coordination by Birchwood Syndicate.</span>
+                </div>
+                
+                <div class="cta-buttons-block">
+                  <!-- Dynamic WhatsApp link inside modal -->
+                  <a href="" 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     class="btn btn-whatsapp w-full btn-large"
+                     id="modal-whatsapp-cta">
+                    <i data-lucide="message-square"></i>
+                    <span>Schedule Private Viewing</span>
+                  </a>
+                  
+                  <a href="#contact-section" class="btn btn-outline w-full btn-large" id="modal-email-inquire">
+                    <i data-lucide="mail"></i>
+                    <span>Request Digital Brochure</span>
+                  </a>
+                </div>
+                
+                <div class="agent-compact-info">
+                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=80&q=80" alt="Agent avatar" class="agent-avatar-small">
+                  <div class="agent-compact-desc">
+                    <p class="agent-name">Devang Vora</p>
+                    <p class="agent-role">Assigned Curator</p>
+                  </div>
+                </div>
+                
+                <!-- Dynamic OSM Map for specific property -->
+                <div class="modal-map-wrapper">
+                  <span class="map-label"><i data-lucide="map"></i> General Location</span>
+                  <div class="modal-map-container" id="modal-map-container">
+                    <!-- Leaflet/OSM Frame -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lucide Script -->
+  <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  
+  <!-- App JS & Database -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>

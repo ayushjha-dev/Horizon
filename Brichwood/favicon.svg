@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Soft, premium background -->
+  <rect width="32" height="32" rx="8" fill="#1A1A1A"/>
+  
+  <!-- Architectural grid/structure in muted cream/gold -->
+  <circle cx="16" cy="16" r="10" stroke="#E5E2DA" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="2 2"/>
+  
+  <!-- The main architectural arch (representing living/structures) -->
+  <path d="M11 23V15C11 12.2386 13.2386 10 16 10C18.7614 10 21 12.2386 21 15V23" stroke="#FAF9F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- The abstract central Birch tree trunk/pillar in Terracotta -->
+  <path d="M16 23V11" stroke="#C7623A" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Sleek, abstract leaves/branches in Terracotta -->
+  <path d="M16 14L19.5 11.5" stroke="#C7623A" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M16 17.5L12.5 15" stroke="#C7623A" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M16 20.5L19.5 18" stroke="#C7623A" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
