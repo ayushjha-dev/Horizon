@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .brass-divider {
+    height: 2px;
+    background: linear-gradient(90deg, #D9A227 0%, #F8BD42 50%, #D9A227 100%);
+    box-shadow: 0 1px 0 0 rgba(54, 47, 43, 0.4);
+  }
+  .weathered-paper {
+    background-image: url('https://www.transparenttextures.com/patterns/handmade-paper.png');
+    background-color: #f8ece5;
+  }
+  .chai-stain {
+    background: radial-gradient(circle at center, rgba(149, 60, 22, 0.05) 0%, transparent 70%);
+  }
+  .hard-shadow {
+    box-shadow: 4px 4px 0px 0px #b5532c;
+  }
+  .hard-shadow-active {
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+  }
+  .hard-shadow-active:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px #b5532c;
+  }
+  .tin-texture {
+    background-image: repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px);
+  }
+  .hand-painted {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+  }
+  .scrawled {
+    font-family: 'Courier Prime', monospace;
+    font-style: italic;
+  }
+  
+  @keyframes menuFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .menu-item-animate {
+    animation: menuFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Cart drawer transitions */
+  .cart-drawer-open {
+    transform: translateX(0);
+  }
+  .cart-drawer-closed {
+    transform: translateX(100%);
+  }
+
+  /* Modal transitions */
+  .modal-open {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s ease;
+  }
+  .modal-closed {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Custom scrollbar */
+  .custom-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scroll::-webkit-scrollbar-track {
+    background: #f8ece5;
+  }
+  .custom-scroll::-webkit-scrollbar-thumb {
+    background: #b5532c;
+  }
+
+  /* Vintage ticket with side notches */
+  .vintage-ticket {
+    position: relative;
+    background-color: #fff8f5;
+    background-image: url('https://www.transparenttextures.com/patterns/handmade-paper.png');
+    border: 2px dashed #89726a;
+  }
+  .vintage-ticket::before, .vintage-ticket::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #362f2b; /* matches backing soot color */
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .vintage-ticket::before {
+    left: -11px;
+    border-right: 2px dashed #89726a;
+  }
+  .vintage-ticket::after {
+    right: -11px;
+    border-left: 2px dashed #89726a;
+  }
+}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+  <!-- Circular background for compatibility with both light and dark browser themes -->
+  <circle cx="32" cy="32" r="30" fill="#fff8f5" stroke="#953c16" stroke-width="2.5" />
+  
+  <!-- Steam rising from the tea -->
+  <path d="M44 20 Q41 14 45 10 T43 4" fill="none" stroke="#D9A227" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+  <path d="M49 22 Q46 17 50 13 T48 7" fill="none" stroke="#D9A227" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Soot-blackened Kettle -->
+  <!-- Handle (over the top) -->
+  <path d="M21 26 C19 18 23 12 28 12 C33 12 37 18 35 26" fill="none" stroke="#362f2b" stroke-width="3.5" stroke-linecap="round" />
+  <path d="M23 12 L33 12" stroke="#D9A227" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Kettle Body -->
+  <path d="M14 40 C14 31 19 26 28 26 C37 26 42 31 42 40 C42 45 39 49 35 51 L21 51 C17 49 14 45 14 40 Z" fill="#362f2b" />
+  
+  <!-- Kettle Lid -->
+  <path d="M22 26 C22 23 24 21 28 21 C32 21 34 23 34 26 Z" fill="#D9A227" />
+  <circle cx="28" cy="19" r="2" fill="#D9A227" />
+  
+  <!-- Kettle Spout (pouring) -->
+  <path d="M38 32 L46 24 L48 26.5 L40 35 Z" fill="#362f2b" />
+  
+  <!-- Tea Stream pouring down -->
+  <path d="M47.5 25 Q51 32 50.5 40" fill="none" stroke="#953c16" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Clay Kulhad (Cup) at bottom-right receiving the tea -->
+  <path d="M45.5 40 L55.5 40 L53.5 50 L47.5 50 Z" fill="#953c16" />
+  <ellipse cx="50.5" cy="40" rx="5" ry="1.5" fill="#7f2b05" />
+</svg>
